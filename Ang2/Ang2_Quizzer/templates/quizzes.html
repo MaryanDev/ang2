@@ -1,0 +1,28 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-lg-push-4">
+            <table class="table table-responsive table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Title
+                        </th>
+                        <th>
+                            Duration
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let quiz of Quizzes">
+                        <td>{{quiz.Id}}</td>
+                        <td><a routerLink="/quizzes/{{quiz.Id}}" routerLinkActive="active">{{quiz.Title}}</a></td>
+                        <td>{{quiz.Duration}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

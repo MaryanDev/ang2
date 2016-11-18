@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular2_Trainings", "Angular2_Trainings\Angular2_Trainings.csproj", "{CEB49FC9-4ECE-4E56-99D4-C97C8CD68BA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ang2_Quizzer", "Ang2_Quizzer\Ang2_Quizzer.csproj", "{B12EACE2-C1A5-4FB9-B3C2-6FC486D2F7FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEB49FC9-4ECE-4E56-99D4-C97C8CD68BA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEB49FC9-4ECE-4E56-99D4-C97C8CD68BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEB49FC9-4ECE-4E56-99D4-C97C8CD68BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEB49FC9-4ECE-4E56-99D4-C97C8CD68BA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B12EACE2-C1A5-4FB9-B3C2-6FC486D2F7FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B12EACE2-C1A5-4FB9-B3C2-6FC486D2F7FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B12EACE2-C1A5-4FB9-B3C2-6FC486D2F7FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B12EACE2-C1A5-4FB9-B3C2-6FC486D2F7FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

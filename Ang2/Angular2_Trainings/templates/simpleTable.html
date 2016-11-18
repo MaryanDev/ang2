@@ -1,0 +1,28 @@
+﻿<child-comp #child [title]="title" [price]="price" (onNameChanged)="onNameChanged($event)"></child-comp>
+<h1>Wellcome {{name}}</h1>
+<div>
+    <input type="text" placeholder="name" [(ngModel)]="name"/>
+</div>
+<div>
+    <input type="text" placeholder="phone" [(ngModel)]="phone" /> 
+</div>
+<div>
+    <input type="button" value="Add" (click)="addPerson(name, phone)" />
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Person of Persons">
+            <td>{{Person.Id}}</td>
+            <td>{{Person.Name}}</td>
+            <td>{{Person.Phone}}</td>
+        </tr>
+    </tbody>
+</table>
+<button (click)="child.logAction('Fuck')"></button>
