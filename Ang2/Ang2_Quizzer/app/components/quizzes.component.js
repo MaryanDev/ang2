@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var http_service_1 = require('./http.service');
+var http_service_1 = require('../services/http.service');
 var QuizzesComponent = (function () {
     function QuizzesComponent(httpService) {
         this.httpService = httpService;
@@ -26,7 +26,7 @@ var QuizzesComponent = (function () {
         core_1.Component({
             selector: 'quizzes',
             templateUrl: 'templates/quizzes.html',
-            styleUrls: ['app/quizzes.component.css'],
+            styleUrls: ['app/styles/quizzes.component.css'],
             providers: [http_service_1.HttpService]
         }), 
         __metadata('design:paramtypes', [http_service_1.HttpService])

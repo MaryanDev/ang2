@@ -17,6 +17,14 @@ var HttpService = (function () {
     HttpService.prototype.getAllQuizzes = function () {
         return this.http.get('api/quiz');
     };
+    HttpService.prototype.getQuestionsForQuiz = function (id) {
+        return this.http.get("api/quiz/" + id);
+    };
+    HttpService.prototype.sendResult = function (result) {
+        //let headers = new Headers({ 'Content-Type': 'application/json' });
+        //let options = new RequestOptions({ headers: headers });
+        return this.http.post("api/quiz", result);
+    };
     HttpService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])

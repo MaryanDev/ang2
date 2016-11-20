@@ -10,24 +10,45 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
+var angular2_modal_1 = require('angular2-modal');
+var bootstrap_1 = require('angular2-modal/plugins/bootstrap');
 var router_1 = require('@angular/router');
-var app_component_1 = require('./app.component');
-var quizzes_component_1 = require('./quizzes.component');
-var quizInRun_component_1 = require('./quizInRun.component');
+var common_1 = require('@angular/common');
+var app_component_1 = require('./components/app.component');
+var quizzes_component_1 = require('./components/quizzes.component');
+var quizInRun_component_1 = require('./components/quizInRun.component');
 var appRoutes = [
     { path: 'quizzes', component: quizzes_component_1.QuizzesComponent },
     { path: 'quizzes/:id', component: quizInRun_component_1.QuizInRunComponent },
-    { path: '', component: quizzes_component_1.QuizzesComponent }
+    { path: '', component: quizzes_component_1.QuizzesComponent },
+    { path: '**', component: quizzes_component_1.QuizzesComponent }
 ];
 var QuizzesModule = (function () {
     function QuizzesModule() {
     }
     QuizzesModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, http_1.HttpModule, router_1.RouterModule.forRoot(appRoutes)],
-            declarations: [app_component_1.AppComponent, quizzes_component_1.QuizzesComponent, quizInRun_component_1.QuizInRunComponent],
-            bootstrap: [app_component_1.AppComponent]
+            imports: [
+                platform_browser_1.BrowserModule,
+                http_1.HttpModule,
+                router_1.RouterModule.forRoot(appRoutes),
+                forms_1.FormsModule,
+                angular2_modal_1.ModalModule.forRoot(),
+                bootstrap_1.BootstrapModalModule
+            ],
+            declarations: [
+                app_component_1.AppComponent,
+                quizzes_component_1.QuizzesComponent,
+                quizInRun_component_1.QuizInRunComponent
+            ],
+            providers: [
+                { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }
+            ],
+            bootstrap: [
+                app_component_1.AppComponent
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], QuizzesModule);

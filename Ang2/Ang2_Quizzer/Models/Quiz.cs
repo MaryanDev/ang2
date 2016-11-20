@@ -12,5 +12,14 @@ namespace Ang2_Quizzer.Models
         public int Duration { get; set; }
 
         public List<Question> Questions { get; set; }
+
+
+        public Quiz(int id, string title, int duration, List<Question> questions)
+        {
+            Id = id;
+            Title = title;
+            Duration = duration;
+            Questions = questions;
+        }
     }
 }
